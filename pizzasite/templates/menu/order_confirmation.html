@@ -1,0 +1,28 @@
+{% extends 'menu/base.html' %}
+{% load static %}
+{% block title %}Zamówienie przyjęte do realizacji - Pizza3miasto{% endblock %}
+
+{% block content %}
+<h1>Dziękujemy za zamówienie!</h1>
+<p>Twoje zamówienie zostało przyjęte. Zostanie dostarczone w ciągu 14 dni roboczych!</p>
+<a href="{% url 'home' %}">Powrót na stronę główną</a>
+
+<div id="order-popup">
+    <div id="order-popup-content">
+        <h2>✅ Zamówienie wysłane!</h2>
+        <p>Twoje zamówienie zostało przyjęte i jest w trakcie realizacji.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/cart.js' %}"></script>
+<script>
+  localStorage.removeItem('cart');
+
+  document.addEventListener("DOMContentLoaded", function() {
+      openPopup();
+  });
+</script>
+{% endblock %}

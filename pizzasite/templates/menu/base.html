@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pizza3miasto{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="logo">🍕 Pizza3miasto</div>
+            <ul>
+                <li><a href="{% url 'home' %}">Strona główna</a></li>
+                <li><a href="{% url 'pizza_list' %}">Menu</a></li>
+                <li><a href="{% url 'contact' %}">Kontakt</a></li>
+                <li><a href="{% url 'cart_view' %}">🛒 Koszyk</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>{% block header %}Najlepsza pizza w Trójmieście! 🍕{% endblock %}</h1>
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Pizza3miasto. Artur, wybacz mi moje poczucie humoru :(</p>
+        </footer>
+    </div>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

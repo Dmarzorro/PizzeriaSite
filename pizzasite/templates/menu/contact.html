@@ -1,0 +1,36 @@
+{% extends 'menu/base.html' %}
+{% block title %}Kontakt - Pizza3miasto{% endblock %}
+
+{% block content %}
+<h1 style="text-align: center;">Skontaktuj się z nami</h1>
+<h2 style="text-align: center;">Formularz kontaktowy</h2>
+
+<div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+    <form method="post" style="width: 300px;">
+        {% csrf_token %}
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <p>
+                <label for="id_imie">Imię:</label>
+                {{ form.imie }}
+            </p>
+            <p>
+                <label for="id_telefon">Numer telefonu:</label>
+                {{ form.telefon }}
+            </p>
+            <p>
+                <label for="id_email">Email:</label>
+                {{ form.email }}
+            </p>
+            <p>
+                <label for="id_tresc">Treść:</label>
+                {{ form.tresc }}
+            </p>
+            <button type="submit">Wyślij wiadomość</button>
+        </div>
+    </form>
+</div>
+
+<p style="text-align: center;">
+    <a href="{% url 'pizza_list' %}">Powrót do menu</a>
+</p>
+{% endblock %}
