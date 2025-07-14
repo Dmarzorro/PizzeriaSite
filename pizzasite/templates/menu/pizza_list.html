@@ -1,0 +1,37 @@
+{% extends 'menu/base.html' %}
+{% load static %}
+
+{% block title %}Menu Pizzy - Pizza3miasto{% endblock %}
+
+{% block content %}
+<h2>Menu pizzy</h2>
+
+<table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+    <thead>
+        <tr>
+            <th>Nazwa</th>
+            <th>Cena</th>
+            <th>Akcja</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pizza in pizzas %}
+            <tr>
+                <td><strong>{{ pizza.name }}</strong></td>
+                <td>{{ pizza.price }} PLN</td>
+                <td>
+                    <button onclick="addToCart({{ pizza.id }}, '{{ pizza.name }}', {{ pizza.price }})">
+                        Dodaj ➕
+                    </button>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'cart_view' %}" class="btn">Przejdź do koszyka</a>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/cart.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'menu/base.html' %}
+{% load static %}
+
+{% block title %}Twój koszyk - Pizza3miasto{% endblock %}
+
+{% block content %}
+<h2>Twój koszyk</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nazwa</th>
+            <th>Cena (PLN)</th>
+            <th>Ilość</th>
+            <th>Akcja</th>
+        </tr>
+    </thead>
+    <tbody id="cart-items"></tbody>
+</table>
+
+<p id="total-price">Razem: 0 PLN</p>
+
+<a href="{% url 'order_form' %}" class="btn">Złóż zamówienie</a>
+<a href="{% url 'pizza_list' %}" class="btn">Powrót do menu</a>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/cart.js' %}"></script>
+{% endblock %}

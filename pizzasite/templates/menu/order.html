@@ -1,0 +1,34 @@
+{% extends 'menu/base.html' %}
+{% load static %}
+
+{% block title %}Składanie zamówienia - Pizza3miasto{% endblock %}
+
+{% block content %}
+<div class="order-form-container">
+    <h1>Składanie zamówienia</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="cart_data" id="cart_data_input" />
+        <button type="submit" id="submit_order_btn">Złóż zamówienie</button>
+    </form>
+
+    <a href="{% url 'cart_view' %}">Powrót do koszyka</a>
+</div>
+
+<script>
+    let cartData = localStorage.getItem("cart") || "{}";
+    document.getElementById("cart_data_input").value = cartData;
+
+    try {
+        let cart = JSON.parse(cartData);
+        if (Object.keys(cart).length === 0) {
+            alert("Twój koszyk jest pusty! Powietrza nie możemy wysłać :)");
+            window.location.href = "{% url 'pizza_list' %}";
+        }
+    } catch (e) {
+        console.error("Błąd parsowania danych koszyka:", e);
+    }
+</script>
+{% endblock %}

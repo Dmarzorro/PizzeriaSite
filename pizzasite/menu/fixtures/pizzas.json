@@ -1,0 +1,52 @@
+[
+    {
+        "model": "menu.pizza",
+        "pk": 1,
+        "fields": {
+            "name": "Margherita",
+            "description": "Klasyczna włoska pizza z sosem pomidorowym, mozzarellą i świeżą bazylią",
+            "ingredients": [1, 2, 3],
+            "price": 25.99
+        }
+    },
+    {
+        "model": "menu.pizza",
+        "pk": 2,
+        "fields": {
+            "name": "Pepperoni",
+            "description": "Aromatyczna pizza z pikantnym salami pepperoni i roztopionym serem mozzarella.",
+            "ingredients": [1, 2, 4],
+            "price": 29.99
+        }
+    },
+    {
+        "model": "menu.pizza",
+        "pk": 3,
+        "fields": {
+            "name": "Hawajska",
+            "description": "Kontrowersyjna, ale uwielbiana! Szynka, ananas i mozzarella na sosie pomidorowym.",
+            "ingredients": [1, 2, 5, 6],
+            "price": 27.99
+        }
+    },
+    {
+        "model": "menu.pizza",
+        "pk": 4,
+        "fields": {
+            "name": "Cztery Sery",
+            "description": "Idealna dla miłośników sera! Gorgonzola, parmezan, ricotta i mozzarella tworzą niebiańską kombinację.",
+            "ingredients": [2, 7, 8, 9],
+            "price": 32.99
+        }
+    },
+    {
+        "model": "menu.pizza",
+        "pk": 5,
+        "fields": {
+            "name": "Mięsna uczta",
+            "description": "Bogata w smaku pizza z szynką, pepperoni, kiełbasą i chrupiącym bekonem.",
+            "ingredients": [1, 2, 5, 4, 10, 11],
+            "price": 35.99
+        }
+    }
+]

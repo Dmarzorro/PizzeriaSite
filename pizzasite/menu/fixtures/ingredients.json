@@ -1,0 +1,13 @@
+[
+    {"model": "menu.ingredients", "pk": 1, "fields": {"name": "Pomidory"}},
+    {"model": "menu.ingredients", "pk": 2, "fields": {"name": "Mozzarella"}},
+    {"model": "menu.ingredients", "pk": 3, "fields": {"name": "Bazylia"}},
+    {"model": "menu.ingredients", "pk": 4, "fields": {"name": "Pepperoni"}},
+    {"model": "menu.ingredients", "pk": 5, "fields": {"name": "Szynka"}},
+    {"model": "menu.ingredients", "pk": 6, "fields": {"name": "Ananas"}},
+    {"model": "menu.ingredients", "pk": 7, "fields": {"name": "Gorgonzola"}},
+    {"model": "menu.ingredients", "pk": 8, "fields": {"name": "Parmezan"}},
+    {"model": "menu.ingredients", "pk": 9, "fields": {"name": "Ricotta"}},
+    {"model": "menu.ingredients", "pk": 10, "fields": {"name": "Kiełbasa"}},
+    {"model": "menu.ingredients", "pk": 11, "fields": {"name": "Bekon"}}
+]
