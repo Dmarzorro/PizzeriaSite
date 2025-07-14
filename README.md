@@ -23,7 +23,7 @@ Getting Started
 
 1. Clone the repository
 
-git clone https://github.com/yourusername/pizza-ordering-site.git
+git clone https://github.com/Dmarzorro/PizzeriaSite-.git
 cd pizza-ordering-site
 
 2. Create virtual environment and install dependencies
