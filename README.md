@@ -24,7 +24,7 @@ Getting Started
 1. Clone the repository
 
 git clone https://github.com/Dmarzorro/PizzeriaSite-.git
-cd pizza-ordering-site
+cd pizzasite
 
 2. Create virtual environment and install dependencies
 
