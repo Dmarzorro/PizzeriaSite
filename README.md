@@ -34,7 +34,8 @@ source .venv/bin/activate  # macOS/Linux
 
 pip install -r requirements.txt
 
-3. Apply migrations and load data
+3. Apply migrations and load data 
+
 python manage.py migrate
 python manage.py loaddata ingredients.json
 python manage.py loaddata pizzas.json
